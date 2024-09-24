@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Runs before git flow feature finish
+#
+# Positional arguments:
+# $1    The friendly name of the branch
+# $2    The origin remote
+# $3    The full branch name (including the feature prefix)
+#
+# The following variables are available as they are exported by git-flow:
+#
+# MASTER_BRANCH - The branch defined as Master
+# DEVELOP_BRANCH - The branch defined as Develop
+#
+NAME=$1
+ORIGIN=$2
+BRANCH=$3
+
+pnpm lint & pnpm test
+
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+exit 0
