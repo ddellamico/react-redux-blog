@@ -1,18 +1,16 @@
 import { config } from '../config';
+import { mockDb } from '../db';
 import { http, HttpResponse } from 'msw';
 
 export const usersHandlers = [
-  http.get<any, any>(`${config.API_URL}/users`, () => {
+  http.get(`${config.API_URL}/users`, () => {
     try {
-      return HttpResponse.json({
-        id: '123',
-        name: 'Marco',
-        surname: 'Turi',
-      });
+      const users = mockDb.user.getAll();
+      return HttpResponse.json(users);
     } catch (error: any) {
       return HttpResponse.json(
-        { message: error?.message || 'Server Error' },
-        { status: 400 },
+        { message: error?.message || 'Error fetching users' },
+        { status: 500 },
       );
     }
   }),

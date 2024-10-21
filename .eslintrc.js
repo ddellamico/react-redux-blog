@@ -84,6 +84,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    '@typescript-eslint/no-misused-promises': 'off',
     'import/extensions': 'off',
     'import/no-cycle': 'off',
     'import/no-extraneous-dependencies': 'off',

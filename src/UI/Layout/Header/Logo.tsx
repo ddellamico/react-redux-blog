@@ -1,5 +1,5 @@
 import { Text } from '@radix-ui/themes';
 
 export function Logo() {
-  return <Text>React Boilerplate</Text>;
+  return <Text>React Redux Blog App</Text>;
 }
