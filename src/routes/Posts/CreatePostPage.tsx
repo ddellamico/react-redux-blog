@@ -5,12 +5,15 @@ import { AddPostForm } from '@/features/posts/components/AddPostForm';
 function CreatePostPage() {
   return (
     <Container>
-      <Text
-        size="7"
-        as="p"
-      >
-        Create Post
-      </Text>
+      <div className="mb-4 items-center">
+        <Text
+          className="text-center"
+          size="7"
+          as="p"
+        >
+          Create Post
+        </Text>
+      </div>
       <AddPostForm />
     </Container>
   );

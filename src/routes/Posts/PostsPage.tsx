@@ -8,6 +8,7 @@ function PostsPage() {
     <Container>
       <div className="mb-4 flex items-center justify-between">
         <Text
+          className="pl-1"
           size="7"
           as="p"
         >

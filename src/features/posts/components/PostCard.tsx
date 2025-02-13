@@ -48,7 +48,9 @@ export function PostCard({ post }: Props) {
         </div>
         <div className="mx-auto basis-1/4 text-center">
           <PostAuthor userId={post.userId} />
-          <TimeAgo timestamp={post?.date} />
+          <div className="pt-3">
+            <TimeAgo timestamp={post?.date} />
+          </div>
         </div>
       </div>
     </Card>
